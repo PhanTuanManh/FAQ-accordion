@@ -1,0 +1,159 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Darkpurple: hsl(292, 42%, 14%);
+    --Purple: #AD28EB;
+}
+
+@font-face {
+    font-family: Work Sans;
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: url(./assets/images/background-pattern-desktop.svg) center top no-repeat;
+    background-color: var(--Lightpink);
+    font-family: Work Sans;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100dvh;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 16.7rem;
+
+}
+
+.card {
+    width: 60rem;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.card__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.2rem;
+}
+
+.card__head-title {
+    font-size: 5.6rem;
+    color: var(--Darkpurple);
+    margin-left: 2.4rem;
+}
+
+.card__boxquestion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 2.4rem;
+
+}
+
+.card__main>.card__boxquestion:last-of-type {
+    margin-bottom: 0;
+}
+
+.card__question {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--Darkpurple);
+}
+
+.card__question:hover {
+    color: var(--Purple);
+}
+
+.card__question-plus {
+    display: none;
+}
+
+.card__question-minus {
+    display: none;
+}
+
+.card__answer {
+    line-height: 1.6;
+    color: var(--Darkpurple);
+    font-size: 1.6rem;
+    opacity: 0.7;
+    display: none;
+}
+
+.card__answer:last-child {
+    margin-top: 2.4rem;
+}
+
+.visible {
+    display: block;
+}
+
+.divider {
+    border: 1px solid var(--Lightpink);
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.attribution {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    font-weight: 600;
+}
+
+.attribution a {
+    color: var(--Purple);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .card {
+        width: 32.7rem;
+        padding: 2.4rem;
+    }
+
+    .card__head {
+        margin-bottom: 2.4rem;
+    }
+
+    .card__head-icon {
+        width: 3.6rem;
+    }
+
+    .card__head-title {
+        font-size: 3.6rem;
+    }
+
+    .card__question {
+        font-size: 1.6rem;
+    }
+
+    .card__answer {
+        font-size: 1.4rem;
+    }
+
+}
